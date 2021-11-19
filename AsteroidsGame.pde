@@ -22,15 +22,17 @@ public void draw()
     if (key == 'a'|| key == 'A') {//left
       soup.turn(-10);
     }
+    if (key == 's' || key == 'S') {//backwards
+      soup.accelerate(-0.4);
+    }
     if (key == 'd' || key == 'D') {//right
       soup.turn(10);
     }
-    if (key == CODED) { //the mf speed
+    if (key == CODED || key == 'w' || key == 'W') { //the mf speed / forward
       soup.accelerate(0.4);
     }
-    if (key == ' ') { //stop everythang 
-      soup.setXspeed(0);
-      soup.setYspeed(0);
+    if (key == ' ') {
+      soup.hyperSpace();
     }
   }
   soup.show();
