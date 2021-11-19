@@ -23,10 +23,10 @@ class Spaceship extends Floater
     xCorners[5] = -4;
     yCorners[5] = -3;
   }
-  public void setXspeed(double x) {
-    myXspeed = x;
-  }
-  public void setYspeed(double y) {
-    myYspeed = y;
+  public void hyperSpace() {
+    myXspeed = 0;
+    myYspeed = 0;
+    myCenterX = (int)(Math.random()*300);
+    myCenterY = (int)(Math.random()*300);
   }
 }
