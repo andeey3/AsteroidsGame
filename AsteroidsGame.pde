@@ -1,13 +1,15 @@
 Star [] sue;
 Spaceship soup;
+ArrayList <Asteroid> amy = new ArrayList <Asteroid>();
 //your variable declarations here
 public void setup() 
 {
   //frameRate(144);
-  frameRate(60);
+  frameRate(75);
   size(500, 500);
   sue = new Star[100];
   soup = new Spaceship();
+
   for (int i = 0; i < sue.length; i++) {
     sue[i] = new Star();
   }
@@ -37,4 +39,9 @@ public void draw()
   }
   soup.show();
   soup.move();
+  for (int i = 0; i < 20; i++) {
+    amy.add(new Asteroid());
+    amy.get(i).show();
+    amy.get(i).move();
+  }
 }
